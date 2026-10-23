@@ -1,0 +1,43 @@
+// Built-in "know this" briefs: the specific information needed for each step.
+// Points are ordered most-important-first so they can be trimmed to fit the time left.
+// (With an LLM provider configured, these are generated per task — see llm.js.)
+export const BRIEFS = {
+  'presentation.outline': { p: ["Write the message as: \"Because X, we should Y.\" — one sentence, no jargon.", "Pick exactly three supporting points; if you have more, merge or cut.", "Order them by strength — never bury the best one in the middle.", "Decide the single action you want the audience to take."], x: "One sentence plus three bullets. Nothing else." },
+  'presentation.core': { p: ["One idea per slide. The headline is the takeaway (\"Costs fell 30%\"), not a label (\"Costs\").", "Use claim → evidence → so-what on every slide.", "About 20 words per slide; move detail into speaker notes.", "Don't design yet — plain text on a blank slide is fine."], x: "Three slides: headline plus one proof each." },
+  'presentation.openclose': { p: ["Open with a problem, a surprising number or a tiny story — not \"Hi, I'm…\".", "Close by repeating your one sentence, then make the ask.", "Opener under 30 seconds, closer under 20."], x: "A one-line opener and a one-line close with the ask." },
+  'presentation.visuals': { p: ["Replace any list of numbers with one chart; put the takeaway on the chart itself.", "One image per slide, high contrast, no clipart.", "If a visual takes over 5 minutes, use a simple table instead."], x: "One chart on your strongest slide." },
+  'presentation.polish': { p: ["Two fonts max, one accent colour, align everything to a grid.", "Check contrast — dark text on light backgrounds survives bad projectors.", "Cut the weakest slide rather than shrinking text."], x: "Fix fonts and alignment only." },
+  'presentation.rehearse': { p: ["Say it aloud against a timer; stop only where you stumble.", "Know your first and last sentences by heart.", "Prepare answers to the two toughest questions."], x: "Run it once aloud, start to finish." },
+
+  'writing.brief': { p: ["Rewrite the prompt as one question you can answer in one sentence.", "Note the constraints: length, audience, format, sources required.", "Decide what a top answer includes that an average one wouldn't."], x: "Write the question in one sentence." },
+  'writing.outline': { p: ["Each heading is a claim, not a topic (\"Remote work raises output\", not \"Remote work\").", "Three to five headings is enough for most pieces.", "Under each, note the one example or evidence you'll use."], x: "Three headings, one claim each." },
+  'writing.draft': { p: ["Don't edit while drafting — write [FIX LATER] and keep moving.", "One paragraph per claim: claim, evidence, why it matters.", "Aim for about 80% of target length; trimming is easier than padding."], x: "One rough paragraph per heading." },
+  'writing.framing': { p: ["Intro in three sentences: context → problem → your answer.", "Conclusion: restate the answer, then the \"so what\". No new points.", "Write these last — now you know what you argued."], x: "A two-sentence intro and a two-sentence conclusion." },
+  'writing.edit': { p: ["Cut any opening sentence that only warms up.", "Replace vague words (very, really, things) with specifics.", "Check every paragraph still supports your one-sentence answer."], x: "Delete the weakest paragraph." },
+  'writing.proof': { p: ["Read it aloud — your ear catches what your eye skips.", "Check names, numbers, dates and every citation.", "Spell-check last, then re-read the title and first line."], x: "Read the first and last paragraphs aloud." },
+
+  'study.map': { p: ["List every topic from the syllabus or past paper — five minutes, no looking things up.", "Star topics worth the most marks or that you've never practised.", "Order: high-weight and weak first; low-weight and strong last."], x: "Star the three topics that matter most." },
+  'study.concepts': { p: ["For each concept write: what it is, why it matters, one example.", "If you can't explain it in two sentences without notes, you don't know it yet.", "Look for links between concepts — exams reward connections."], x: "Explain the top concept in two sentences." },
+  'study.practice': { p: ["Attempt first, check second — the struggle is the learning.", "Time yourself on at least one exam-style question.", "Log each mistake as knowledge, method or carelessness."], x: "Do three questions without notes." },
+  'study.weak': { p: ["Revisit only what you got wrong, not everything.", "Fix the cause (missing fact or wrong method), then redo the question cold.", "Write a one-line rule for each fix."], x: "Redo the question you got wrong." },
+  'study.recall': { p: ["Close everything and write all you remember on a blank page.", "Mark the gaps in a different colour — those are your last targets.", "Sleep beats another hour of cramming."], x: "Close the book and write what you remember." },
+
+  'build.define': { p: ["Write \"It's done when…\" with three checks a stranger could verify.", "Cut every feature those checks don't need.", "Decide the demo path now — the exact clicks you'll show."], x: "One sentence: it's done when…" },
+  'build.scaffold': { p: ["Get an end-to-end hello-world first: input → logic → output.", "Use boring, familiar tools — this isn't the moment to learn a framework.", "Commit early; a working skeleton is your safety net."], x: "A hello-world of the whole thing, running." },
+  'build.core': { p: ["Build the one thing that makes this worth showing.", "Hard-code or mock anything that isn't the point.", "Run it after every small change — never code 30 minutes blind."], x: "Build only the one feature that matters." },
+  'build.edges': { p: ["Break it on purpose: empty input, huge input, double-click, no network.", "Fix only what breaks the demo path.", "One clear error message beats handling everything."], x: "Test the main path once and fix the first bug." },
+  'build.polish': { p: ["README: what it is, how to run it, one screenshot.", "Remove dead code and debug prints.", "Name things so the demo reads clearly."], x: "Three lines on how to run it." },
+  'build.demo': { p: ["Run the exact walkthrough from a clean start.", "Time it and cut anything that drags.", "Have a fallback if the live part fails (a recording or screenshots)."], x: "Run the demo once, start to finish." },
+
+  'workout.warmup': { p: ["Five minutes of light cardio, then joint circles: neck, shoulders, hips, ankles.", "Do one or two lighter sets of your first exercise.", "If anything feels sharp (not just tired), swap the movement."], x: "Five easy minutes to get warm." },
+  'workout.main': { p: ["Lead with the biggest compound lifts while you're fresh.", "Leave 1–2 reps in reserve; form beats weight.", "Rest 90–120 s between heavy sets, 45–60 s for lighter ones."], x: "Do your main set with good form." },
+  'workout.accessory': { p: ["Pick 2–3 exercises for what the main work missed.", "8–12 controlled reps, 2–3 sets.", "Short on time? Superset opposing muscle groups."], x: "Two accessory exercises." },
+  'workout.finisher': { p: ["Keep it simple: one hard 2-minute effort or one burnout set.", "Stop before your form breaks down.", "Skip it entirely if you're short on time."], x: "One hard finishing set." },
+  'workout.cooldown': { p: ["Walk 2–3 minutes until your breathing settles.", "Stretch what you worked, 20–30 seconds each.", "Drink water and get protein within a couple of hours."], x: "Walk and stretch for a few minutes." },
+
+  'general.clarify': { p: ["Write \"Finished means…\" with two or three checkable results.", "Note the deadline, who it's for, and any must-haves.", "Ask: what's the smallest version that would still count?"], x: "One line: finished means…" },
+  'general.plan': { p: ["Split it into three biggest pieces; name each with a verb.", "Put the riskiest or most unknown piece first.", "Estimate each in minutes; if one is over half the time, split it."], x: "List three chunks." },
+  'general.core': { p: ["Do the highest-value piece first and don't polish yet.", "Work in focused 25-minute blocks with 5-minute breaks.", "Write questions down to resolve later instead of stopping."], x: "Do the single most important piece." },
+  'general.rest': { p: ["Work through what's left by value, not by what's fun.", "Skip or simplify anything that doesn't change the outcome.", "Check progress against your \"finished means\" line."], x: "Do the next most important piece." },
+  'general.check': { p: ["Re-read your \"finished means\" line and tick each item.", "Fix the biggest gap first; leave cosmetic issues.", "Do a final pass as if you were the person receiving it."], x: "Check it against \"finished means\"." },
+};

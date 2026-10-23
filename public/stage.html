@@ -1,0 +1,35 @@
+<!doctype html><meta charset=utf-8><title>ThatC Life demo stage</title>
+<style>
+*{box-sizing:border-box;margin:0}html,body{width:1920px;height:1080px;overflow:hidden;background:#05060b;color:#f4f4fa;font-family:Inter,system-ui,sans-serif}
+body::before{content:"";position:absolute;inset:0;background:radial-gradient(900px 500px at 20% 0,#2b1a6b55,transparent),radial-gradient(800px 500px at 100% 100%,#0b3a6b55,transparent)}
+.brand{position:absolute;left:40px;top:28px;font-weight:700;font-size:30px;letter-spacing:-.02em;display:flex;gap:14px;align-items:center}
+.brand b{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#7c5cff,#18d6b4);display:grid;place-items:center;font-size:22px}
+.tag{position:absolute;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:#8e93b0}
+#tvt{left:40px;top:80px}#alt{left:1250px;top:80px}
+.frame{position:absolute;border-radius:18px;overflow:hidden;border:1px solid #2a2d45;box-shadow:0 30px 80px -20px #000}
+iframe{border:0;transform-origin:0 0;background:#000}
+#tv{left:40px;top:108px;width:1180px;height:664px}#tv iframe{width:1920px;height:1080px;transform:scale(.6146)}
+#al{left:1250px;top:108px;width:630px;height:864px}#al iframe{width:700px;height:960px;transform:scale(.9)}
+#cap{position:absolute;left:40px;top:800px;width:1180px;height:240px;padding:26px 34px;border-radius:22px;background:rgba(255,255,255,.06);border:1px solid #2a2d45;backdrop-filter:blur(10px);display:flex;flex-direction:column;justify-content:center;gap:12px;transition:opacity .4s}
+#cap .k{font-size:17px;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
+#cap .m{font-size:40px;line-height:1.15;font-weight:700;letter-spacing:-.02em}
+#cap .s{font-size:23px;color:#a6a8bd;line-height:1.35}
+#card{position:absolute;inset:0;z-index:50;display:grid;place-items:center;text-align:center;background:radial-gradient(900px 600px at 50% 40%,#2b1a6b,#05060b 70%);opacity:0;pointer-events:none;transition:opacity .7s;padding:0 160px}
+#card.on{opacity:1}
+#card h1{font-size:92px;line-height:1.05;letter-spacing:-.04em;font-weight:800;max-width:1500px}
+#card h1 em{font-style:normal;background:linear-gradient(90deg,#7c5cff,#18d6b4);-webkit-background-clip:text;background-clip:text;color:transparent}
+#card p{font-size:36px;color:#b9bcd6;margin-top:34px;line-height:1.35;max-width:1400px}
+#card ul{list-style:none;padding:0;margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:20px 60px;text-align:left;font-size:32px;color:#e6e8f6}
+#card li::before{content:"✓ ";color:#4ade80;font-weight:700}
+</style>
+<div class="brand"><b>T</b>ThatC Life</div>
+<div class="tag" id="tvt">Companion screen · web (live)</div><div class="tag" id="alt">Alexa+ · simulated · live MCP trace</div>
+<div class="frame" id="tv"><iframe id="tvf" src="/tv/?h=video"></iframe></div>
+<div class="frame" id="al"><iframe id="alf" src="/alexa/?h=video"></iframe></div>
+<div id="cap"><div class="k" id="ck"></div><div class="m" id="cm"></div><div class="s" id="cs"></div></div>
+<div id="card"><div id="cardin"></div></div>
+<script>
+const $=s=>document.querySelector(s);
+window.cap=(k,m,s,c)=>{$('#ck').textContent=k;$('#ck').style.color=c||'#7c5cff';$('#cm').textContent=m;$('#cs').textContent=s||''};
+window.card=(html)=>{ if(html){$('#cardin').innerHTML=html;$('#card').classList.add('on')} else $('#card').classList.remove('on') };
+</script>

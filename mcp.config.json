@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "thatc-life": {
+      "type": "streamable-http",
+      "url": "http://localhost:8787/mcp?household=demo",
+      "protocolVersion": "2025-11-25"
+    }
+  }
+}

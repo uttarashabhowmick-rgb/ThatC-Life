@@ -1,0 +1,15 @@
+{
+  "name": "thatc-life",
+  "version": "1.0.0",
+  "description": "Adaptive AI that works with time, progress and changing circumstances. Alexa+ MCP server + Fire TV app.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22.9"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env src/server.js",
+    "test": "node --test test/e2e.test.js test/proactive.test.js"
+  },
+  "license": "MIT"
+}

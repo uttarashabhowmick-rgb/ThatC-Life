@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 320x180 Fire TV launcher banner -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient android:startColor="#1a1040" android:endColor="#06060b" android:angle="315"/>
+        </shape>
+    </item>
+    <item android:gravity="center" android:width="56dp" android:height="56dp">
+        <shape android:shape="oval">
+            <gradient android:startColor="#7c5cff" android:endColor="#18d6b4" android:angle="45"/>
+        </shape>
+    </item>
+</layer-list>
